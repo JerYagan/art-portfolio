@@ -115,12 +115,12 @@ export default function TalentsCard() {
   return (
     <SectionCard title="Talents">
       {/* Selector */}
-      <div className="flex gap-4 mb-8 overflow-x-auto">
+      <div className="flex gap-1 md:gap-4 mb-8 overflow-x-auto">
         {talents.map((t) => (
           <button
             key={t.id}
             onClick={() => setActive(t.id)}
-            className={`w-18 h-18 rounded-full flex items-center justify-center border transition
+            className={`w-12 h-12 md:w-18 md:h-18 rounded-full flex items-center justify-center border transition
               ${
                 active === t.id
                   ? "border-teal-400 bg-teal-400/10"
@@ -128,12 +128,10 @@ export default function TalentsCard() {
               }
             `}
           >
-            <Image
+            <img
               src={talentIcons[t.id]}
               alt={t.name}
-              width={40}
-              height={40}
-              className="opacity-90"
+              className="opacity-90 w-[36px] h-[36px] md:w-[40px] md:h-[40px] object-contain"
             />
           </button>
         ))}

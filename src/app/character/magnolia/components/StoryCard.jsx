@@ -25,7 +25,7 @@ export default function StoryCard() {
       <div className="relative mb-6">
         <div
           ref={tabRef}
-          className="flex gap-3 overflow-x-auto no-scrollbar"
+          className="flex flex-wrap gap-3 overflow-x-auto no-scrollbar"
         >
           {magnoliaStories.map((story) => {
             const active = story.id === activeId;

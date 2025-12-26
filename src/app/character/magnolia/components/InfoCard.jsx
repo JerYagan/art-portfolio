@@ -71,15 +71,13 @@ function MaterialSection({ title, materials }) {
 
 function MaterialItem({ src, name }) {
   return (
-    <div className="flex flex-col items-center gap-2 w-20">
+    <div className="flex flex-col items-center gap-2 w-20 md:w-20">
       {/* Icon */}
-      <div className="w-18 h-18 rounded-xl bg-white/10 flex items-center justify-center">
-        <Image
+      <div className="w-16 h-16 md:w-18 md:h-18 rounded-xl bg-white/10 flex items-center justify-center">
+        <img
           src={src}
           alt={name}
-          width={72}
-          height={72}
-          className="object-contain"
+          className="object-contain w-14 h-14 md:w-16 md:h-16"
         />
       </div>
 

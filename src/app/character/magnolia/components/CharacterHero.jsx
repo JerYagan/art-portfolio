@@ -85,7 +85,7 @@ export default function CharacterHero() {
           </div>
 
           {/* ================= RIGHT: SPLASH CAROUSEL ================= */}
-          <div className="relative flex justify-center items-center mt-6 lg:mt-0">
+          <div className="relative flex justify-center items-center mt-2 lg:mt-0">
             <div className="relative w-full max-w-[380px] mx-auto aspect-[3/4] flex justify-center items-center">
               <AnimatePresence mode="wait">
                 <motion.img
