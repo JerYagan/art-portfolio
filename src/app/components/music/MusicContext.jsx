@@ -1,9 +1,9 @@
 "use client";
 
+import { basePath } from "@/lib/basePath";
 import { createContext, useContext, useEffect, useMemo, useRef, useState } from "react";
 
 const MusicContext = createContext(null);
-const BASE = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
 export const tracks = [
   "Brûler Les Ruines",
@@ -14,7 +14,7 @@ export const tracks = [
   "Virel a Lumeris",
 ].map((title) => ({
   title,
-  file: `${BASE}/music/${encodeURIComponent(title)}.mp3`,
+  file: `${basePath}/music/${encodeURIComponent(title)}.mp3`,
 }));
 
 const DEFAULT_INDEX_RAW = tracks.findIndex((t) => t.title === "Song of the Old Riverstone");
