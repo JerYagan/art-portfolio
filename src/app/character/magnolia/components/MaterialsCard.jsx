@@ -1,0 +1,78 @@
+"use client";
+import { SectionCard } from "./SectionCard";
+import Image from "next/image";
+
+const ascensionMaterials = [
+  { src: "/images/magnolia/level-up-materials/Item_Vayuda_Turquoise_Sliver.webp", name: "Vayuda Turquoise" },
+  { src: "/images/magnolia/level-up-materials/Item_Dandelion_Seed.webp", name: "Dandelion Seed" },
+  { src: "/images/magnolia/level-up-materials/Item_Meshing_Gear.webp", name: "Meshing Gear" },
+  { src: "/images/magnolia/level-up-materials/Item_Fragment_of_a_Golden_Melody.webp", name: "Fragment of a Golden Melody" },
+];
+
+const talentMaterials = [
+  { src: "/images/magnolia/level-up-materials/Item_Teachings_of_Justice.webp", name: "Teachings of Justice" },
+  { src: "/images/magnolia/level-up-materials/Item_Meshing_Gear.webp", name: "Meshing Gear" },
+  { src: "/images/magnolia/level-up-materials/Item_Lightless_Mass.webp", name: "Lightless Mass" },
+];
+
+export default function MaterialsCard() {
+  return (
+    <SectionCard title="Materials">
+      <div className="space-y-10">
+
+       <MaterialSection
+          title="Ascension Materials"
+          materials={ascensionMaterials}
+        />
+
+        <MaterialSection
+          title="Talent Level-Up Materials"
+          materials={talentMaterials}
+        />
+
+      </div>
+    </SectionCard>
+  );
+}
+
+/* ---------- Subcomponents ---------- */
+
+function MaterialSection({ title, materials }) {
+  return (
+    <div>
+      <h3 className="text font-semibold tracking-wide mb-4 opacity-80">
+        {title}
+      </h3>
+
+      <div className="flex flex-wrap gap-4">
+        {materials.map((mat, i) => (
+          <MaterialItem key={i} {...mat} />
+        ))}
+      </div>
+    </div>
+  );
+}
+
+
+function MaterialItem({ src, name }) {
+  return (
+    <div className="flex flex-col items-center gap-2 w-20">
+      {/* Icon */}
+      <div className="w-16 h-16 rounded-xl bg-white/10 flex items-center justify-center">
+        <Image
+          src={src}
+          alt={name}
+          width={36}
+          height={36}
+          className="object-contain"
+        />
+      </div>
+
+      {/* Name */}
+      <p className="text-sm text-center leading-tight opacity-80">
+        {name}
+      </p>
+    </div>
+  );
+}
+
