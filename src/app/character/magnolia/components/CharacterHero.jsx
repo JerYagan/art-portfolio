@@ -70,7 +70,7 @@ export default function CharacterHero() {
               {["Anemo", "Sword", "CRIT DMG", "5-Star", "Fontaine"].map((badge) => (
                 <span
                   key={badge}
-                  className="px-3 py-1 text-xs font-semibold rounded-lg bg-[#071C1C]/60 backdrop-blur text-yellow-150"
+                  className="px-3 py-1 text-xs font-semibold rounded-lg bg-[#071C1C]/60 backdrop-blur text-yellow-100"
                 >
                   {badge}
                 </span>
