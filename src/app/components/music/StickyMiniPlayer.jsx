@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useRef, useState } from "react";
 import { useMusic } from "./MusicContext";
+import { basePath } from "@/lib/basePath";
 
 const formatTime = (t = 0) =>
   `${Math.floor(t / 60)}:${String(Math.floor(t % 60)).padStart(2, "0")}`;
@@ -92,7 +93,7 @@ export default function StickyMiniPlayer() {
     >
       <div className="flex items-center gap-3">
         <img
-          src="/images/magnolia/magnolia-portrait.jpg"
+          src={`${basePath}/images/magnolia/magnolia-portrait.jpg`}
           alt=""
           className="w-12 h-12 rounded-xl object-cover border border-white/10"
         />

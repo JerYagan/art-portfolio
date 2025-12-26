@@ -2,14 +2,15 @@
 import { useState } from "react";
 import { SectionCard } from "./SectionCard";
 import Image from "next/image";
+import { basePath } from "@/lib/basePath";
 
 const talentIcons = {
-  0: "/images/magnolia/skills/normal-attack.png",
-  1: "/images/magnolia/skills/elemental-skill.png",
-  2: "/images/magnolia/skills/elemental-burst.png",
-  3: "/images/magnolia/skills/ascension-1.png",
-  4: "/images/magnolia/skills/ascension-2.png",
-  5: "/images/magnolia/skills/exploration.png"
+  0: `${basePath}/images/magnolia/skills/normal-attack.png`,
+  1: `${basePath}/images/magnolia/skills/elemental-skill.png`,
+  2: `${basePath}/images/magnolia/skills/elemental-burst.png`,
+  3: `${basePath}/images/magnolia/skills/ascension-1.png`,
+  4: `${basePath}/images/magnolia/skills/ascension-2.png`,
+  5: `${basePath}/images/magnolia/skills/exploration.png`
 };
 
 const talents = [

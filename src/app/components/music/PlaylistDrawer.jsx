@@ -1,5 +1,6 @@
 "use client";
 
+import { basePath } from "@/lib/basePath";
 import { useMusic } from "./MusicContext";
 
 export default function PlaylistDrawer() {
@@ -59,7 +60,7 @@ export default function PlaylistDrawer() {
               `}
             >
               <img
-                src="/images/magnolia/magnolia-portrait.jpg"
+                src={`${basePath}/images/magnolia/magnolia-portrait.jpg`}
                 className="w-12 h-12 rounded-md object-cover border border-white/10"
                 alt=""
               />

@@ -3,6 +3,7 @@
 import { useRef, useState } from "react";
 import { magnoliaStories } from "@/data/magnolia";
 import { SectionCard } from "./SectionCard";
+import { basePath } from "@/lib/basePath";
 
 export default function StoryCard() {
   const [activeId, setActiveId] = useState("vision");
@@ -68,7 +69,9 @@ export default function StoryCard() {
             </div>
 
             {/* Decorative placeholder (dragonfly / emblem later) */}
-            <div className="h-8 w-8 rounded-md bg-white/10 border border-white/10 shrink-0" />
+            <div className="h-2">
+              <img src={`${basePath}/images/magnolia/dragonfly.png`} alt="dragonfly emblem" className="h-12 w-auto" />
+            </div>
           </div>
         </div>
 

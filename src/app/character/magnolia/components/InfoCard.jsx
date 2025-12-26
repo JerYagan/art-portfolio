@@ -1,17 +1,18 @@
+import { basePath } from "@/lib/basePath";
 import { SectionCard } from "./SectionCard";
 import Image from "next/image";
 
 const ascensionMaterials = [
-  { src: "/images/magnolia/level-up-materials/Item_Vayuda_Turquoise_Sliver.webp", name: "Vayuda Turquoise" },
-  { src: "/images/magnolia/level-up-materials/Item_Dandelion_Seed.webp", name: "Dandelion Seed" },
-  { src: "/images/magnolia/level-up-materials/Item_Meshing_Gear.webp", name: "Meshing Gear" },
-  { src: "/images/magnolia/level-up-materials/Item_Fragment_of_a_Golden_Melody.webp", name: "Fragment of a Golden Melody" },
+  { src: `${basePath}/images/magnolia/level-up-materials/Item_Vayuda_Turquoise_Sliver.webp`, name: "Vayuda Turquoise" },
+  { src: `${basePath}/images/magnolia/level-up-materials/Item_Dandelion_Seed.webp`, name: "Dandelion Seed" },
+  { src: `${basePath}/images/magnolia/level-up-materials/Item_Meshing_Gear.webp`, name: "Meshing Gear" },
+  { src: `${basePath}/images/magnolia/level-up-materials/Item_Fragment_of_a_Golden_Melody.webp`, name: "Fragment of a Golden Melody" },
 ];
 
 const talentMaterials = [
-  { src: "/images/magnolia/level-up-materials/Item_Teachings_of_Justice.webp", name: "Teachings of Justice" },
-  { src: "/images/magnolia/level-up-materials/Item_Meshing_Gear.webp", name: "Meshing Gear" },
-  { src: "/images/magnolia/level-up-materials/Item_Lightless_Mass.webp", name: "Lightless Mass" },
+  { src: `${basePath}/images/magnolia/level-up-materials/Item_Teachings_of_Justice.webp`, name: "Teachings of Justice" },
+  { src: `${basePath}/images/magnolia/level-up-materials/Item_Meshing_Gear.webp`, name: "Meshing Gear" },
+  { src: `${basePath}/images/magnolia/level-up-materials/Item_Lightless_Mass.webp`, name: "Lightless Mass" },
 ];
 
 
@@ -72,12 +73,12 @@ function MaterialItem({ src, name }) {
   return (
     <div className="flex flex-col items-center gap-2 w-20">
       {/* Icon */}
-      <div className="w-16 h-16 rounded-xl bg-white/10 flex items-center justify-center">
+      <div className="w-18 h-18 rounded-xl bg-white/10 flex items-center justify-center">
         <Image
           src={src}
           alt={name}
-          width={36}
-          height={36}
+          width={72}
+          height={72}
           className="object-contain"
         />
       </div>

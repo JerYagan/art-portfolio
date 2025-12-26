@@ -2,18 +2,19 @@
 
 import { useState, useEffect } from "react";
 import { SectionCard } from "./SectionCard";
+import { basePath } from "@/lib/basePath";
 
 const images = [
-  "/images/magnolia/magnolia-portrait.jpg",
-  "/images/magnolia/magnolia-drip-close.jpg",
-  "/images/magnolia/magnolia-drip-far.jpg",
-  "/images/magnolia/magnolia-portrait-2.webp",
-  "/images/magnolia/magnolia-concept-1.webp",
-  "/images/magnolia/magnolia-concept-2.jpg",
-  "/images/magnolia/magnolia-concept-weapon.webp",
-  "/images/magnolia/magnolia-constellation.webp",
-  "/images/magnolia/magnolia-splash.png",
-  "/images/magnolia/magnolia-fanart.png",
+  `${basePath}/images/magnolia/magnolia-portrait.jpg`,
+  `${basePath}/images/magnolia/magnolia-drip-close.jpg`,
+  `${basePath}/images/magnolia/magnolia-drip-far.jpg`,
+  `${basePath}/images/magnolia/magnolia-portrait-2.webp`,
+  `${basePath}/images/magnolia/magnolia-concept-1.webp`,
+  `${basePath}/images/magnolia/magnolia-concept-2.jpg`,
+  `${basePath}/images/magnolia/magnolia-concept-weapon.webp`,
+  `${basePath}/images/magnolia/magnolia-constellation.webp`,
+  `${basePath}/images/magnolia/magnolia-splash.png`,
+  `${basePath}/images/magnolia/magnolia-fanart.png`,
 ];
 
 export default function GalleryCard() {

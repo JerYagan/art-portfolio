@@ -2,10 +2,11 @@
 
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { basePath } from "@/lib/basePath";
 
 const splashImages = [
-  "/images/magnolia/magnolia-splash-2.png",
-  "/images/magnolia/magnolia-drip-far.jpg",
+  `${basePath}/images/magnolia/magnolia-splash-2.png`,
+  `${basePath}/images/magnolia/magnolia-drip-far.jpg`,
 ];
 
 export default function CharacterHero() {
@@ -37,7 +38,7 @@ export default function CharacterHero() {
             <div className="flex gap-4 items-start">
               <div className="h-20 w-20 md:h-24 md:w-24 rounded-xl overflow-hidden bg-white/10 shrink-0">
                 <img
-                  src="/images/magnolia/magnolia-portrait.jpg"
+                  src={`${basePath}/images/magnolia/magnolia-portrait.jpg`}
                   alt="Magnolia portrait"
                   className="w-full h-full object-cover"
                 />
@@ -49,9 +50,9 @@ export default function CharacterHero() {
                     Magnolia
                   </h1>
                   <img
-                    src="/images/magnolia/anemo-logo.png"
+                    src={`${basePath}/images/magnolia/anemo-logo.png`}
                     alt="Anemo"
-                    className="h-6 w-6"
+                    className="h-8 w-8"
                   />
                 </div>
 
@@ -69,7 +70,7 @@ export default function CharacterHero() {
               {["Anemo", "Sword", "CRIT DMG", "5-Star", "Fontaine"].map((badge) => (
                 <span
                   key={badge}
-                  className="px-3 py-1 text-xs rounded-lg bg-[#071C1C]/60 backdrop-blur text-yellow-100"
+                  className="px-3 py-1 text-xs font-semibold rounded-lg bg-[#071C1C]/60 backdrop-blur text-yellow-150"
                 >
                   {badge}
                 </span>
